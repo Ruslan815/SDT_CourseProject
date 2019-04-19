@@ -1,5 +1,5 @@
 #ifndef H_FOO
 #define H_FOO
-float sin(double x);
-float cos(double x);
+double sinus(double x);
+double cosinus(double x);
 #endif
