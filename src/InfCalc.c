@@ -4,7 +4,7 @@
 
 // using namespace std;
 
-int pow(int, int);
+int power(int, int);
 int f10_2(int);
 int fn_10(int, int);
 int f10_n(int, int);
@@ -19,7 +19,7 @@ int f10_16_n(int, int);
 
 void InfCalc()
 {
-    int sys1, sys2, num, res, des;
+    int sys1, sys2, num, des;
     char str[20];
     printf("Enter 2 number system: ");
     scanf("%d%d", &sys1, &sys2);
@@ -42,7 +42,7 @@ void InfCalc()
     // return 0;
 }
 
-int pow(int x, int n)
+int power(int x, int n)
 {
     int a = 1;
     while (n != 0) {
@@ -79,7 +79,7 @@ int fn_10(int num, int sys1)
     for (i = 0; i < n; i++) {
         ost = num % 10;
         // cout « "ost=" « ost « endl;
-        s = pow(sys1, i);
+        s = power(sys1, i);
         // printf("s=%d \n",s);
         b += ost * s;
         num /= 10;
@@ -99,7 +99,7 @@ int f10_n(int num, int sys2)
     }
     // printf("n= %d \n",n);
     if (sys2 >= 2 && sys2 <= 10) {
-        a = new int[n];
+        a = (int*)malloc(n * sizeof(int));
         for (i = 0; i < n; i++) {
             a[i] = num % sys2;
             // printf("%d",a[i]);
@@ -107,9 +107,9 @@ int f10_n(int num, int sys2)
         }
         for (i = n - 1; i >= 0; i--)
             printf("%d", a[i]);
-        delete a;
+        free(a);
     } else {
-        str = new char[n];
+        str = (char*)malloc(n * sizeof(char));
         i = 0;
         while (num > 0) {
             k = num % sys2;
@@ -165,7 +165,6 @@ int f10_n(int num, int sys2)
                 return 0;
             }
             num /= sys2;
-            i++;
         }
         len = strlen(str);
         // printf("len=%d \n",len);
@@ -174,88 +173,88 @@ int f10_n(int num, int sys2)
             putchar(str[i]);
             i--;
         }
-        delete str;
+        free(str);
     }
 }
 
 int f11_16(char str[], int sys1)
 {
-    int len, *a, i, j, b = 0, sp, s;
+    int len, i, b = 0, s;
     len = strlen(str);
     for (i = len - 1; i >= 0; i--) {
         switch (str[i]) {
         case '1':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 1 * s;
             break;
         case '2':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 2 * s;
             break;
         case '3':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 3 * s;
             break;
         case '4':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 4 * s;
             break;
         case '5':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 5 * s;
             break;
         case '6':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 6 * s;
             break;
         case '7':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 7 * s;
             break;
         case '8':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 8 * s;
             break;
         case '9':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 9 * s;
             break;
         case 'A':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 10 * s;
             break;
         case 'B':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 11 * s;
             break;
         case 'C':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 12 * s;
             break;
         case 'D':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 13 * s;
             break;
         case 'E':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 14 * s;
             break;
         case 'F':
-            s = pow(sys1, len - 1 - i);
+            s = power(sys1, len - 1 - i);
             // printf("s=%d \n",s);
             b += 15 * s;
             break;

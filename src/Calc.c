@@ -10,7 +10,7 @@
 
 void Calc()
 {
-    int code, sum = 0, num1, num2, numS;
+    int sum = 0, num1, num2, numS;
     char s;
     printf("Enter first number, sign, second number: \n");
     scanf("%d", &num1);
