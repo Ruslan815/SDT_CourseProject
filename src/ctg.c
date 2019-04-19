@@ -1,7 +1,7 @@
 #include "foo.h"
 #include <math.h>
 #include <stdio.h>
-double tan(double x)
+double ctan(double x)
 {
     double t;
     double sum = 0, c, f, e, z = 1;
