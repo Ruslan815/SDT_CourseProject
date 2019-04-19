@@ -1,5 +1,4 @@
 #include "foo.h"
-#include <conio.h>
 #include <math.h>
 #include <stdio.h>
 double cosinus(double x)
