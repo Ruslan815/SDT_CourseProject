@@ -1,0 +1,7 @@
+bin/
+build/*o
+build_test/*o
+.*.c.swp
+*.c~
+#*#
+
