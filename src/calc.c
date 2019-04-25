@@ -1,6 +1,6 @@
 #include "foo.h"
 
-double Calc(double num1, double num2, char s)
+double calc(double num1, double num2, char s)
 {
     double sum = 0;
     switch (s) {
