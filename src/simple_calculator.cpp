@@ -1,3 +1,5 @@
+#include "foo.h"
+#include <graphics.h>
 void simple_calculator() {
 	setfillstyle(1, 0);
 	bar(0, 0, 240, 300);
@@ -42,4 +44,5 @@ void simple_calculator() {
 	outtextxy(200, 215, "v");
 	line(210, 223, 222, 223);
 	line(210, 224, 222, 224);
+
 }

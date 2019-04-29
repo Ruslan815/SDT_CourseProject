@@ -1,3 +1,5 @@
+#include "foo.h"
+#include <graphics.h>
 void menu() {
 	setcolor(GREEN);
 	setfillstyle(1, 0);
