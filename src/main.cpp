@@ -5,7 +5,7 @@
 #include <string.h>
 #include "foo.h"
 	
-int main() {
+int main() { 
 	bool flag = 1, s, num, point;
 	int mode, code, x, y, massx[5], massy[8], i, j, position;
 	double first, second, result, drob, drob1, zero, buffer;
@@ -197,40 +197,792 @@ int main() {
 
 							switch (position) {
 								case 11:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    7;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    7;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    7;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    7;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 21:									
+								case 21:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    8;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    8;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    8;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    8;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 31:									
+								case 31:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    9;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    9;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    9;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    9;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 41:									
+								case 41:
+									deystvie =
+									    '+';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 42:									
+								case 42:
+									deystvie =
+									    '-';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 13:									
+								case 13:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    4;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    4;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    4;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    4;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 23:									
+								case 23:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    5;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    5;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    5;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    5;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 33:									
+								case 33:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    6;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    6;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    6;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    6;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 43:									
+								case 43:
+									deystvie =
+									    '*';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 44:									
+								case 44:
+									deystvie =
+									    '/';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 15:									
+								case 15:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    1;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    1;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    1;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    1;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 25:									
+								case 25:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    2;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    2;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    2;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    2;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 35:								
+								case 35:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    3;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    3;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    3;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    3;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 45:									
+								case 45:
+									deystvie =
+									    '%';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 46:									
+								case 46:
+									deystvie =
+									    'v';
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 17:									
+								case 17:
+									if (point &&
+									    drob ==
+										0) {
+										zero *=
+										    0.1;
+										delay(
+										    1000);
+									} else if (
+									    point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    drob *
+											    10;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    drob *
+											    10;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    first *
+											    10;
+											delay(
+											    1000);
+										} else {
+											second =
+											    second *
+											    10;
+											delay(
+											    1000);
+										}
+									}
 									break;
-								case 37:								
+								case 37:
+									point =
+									    1;
+									delay(
+									    1000);
 									break;
-								case 47:									
+								case 47:
+									first =
+									    0.000000;
+									second =
+									    0.000000;
+									result =
+									    0.0000000;
+									deystvie =
+									    '0';
+									drob =
+									    0.000000;
+									drob1 =
+									    0.000000;
+									point =
+									    0;
+									num = 1;
+									zero =
+									    1;
 									break;
 							}
 						}
