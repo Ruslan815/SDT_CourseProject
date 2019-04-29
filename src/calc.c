@@ -1,5 +1,4 @@
 #include "foo.h"
-
 double calc(double num1, double num2, char s)
 {
     double sum = 0;

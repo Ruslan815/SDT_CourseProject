@@ -3,11 +3,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "foo.h"
+	
 int main() {
-	bool flag = 1;
-	int mode, code;
-	char ch;
-	POINT cursorPosition;
+	bool flag = 1, s, num, point;
+	int mode, code, x, y, massx[5], massy[8], i, j, position;
+	double first, second, result, drob, drob1, zero, buffer;
+	char ch, deystvie, outp[10];
+	POINT cursorposition;
 	FILE *p;
 
 	p = fopen("mode.txt", "r");
@@ -26,59 +29,361 @@ int main() {
 		return 0;
 	}
 
-	initwindow(250, 300);
+	for (i = 0; i < 5; i++) {
+		massx[i] = i * 60;
+	}
+	for (j = 0; j < 7; j++) {
+		massy[j] = 60 + j * 30;
+	}
+	massy[7] = 300;
+
 	while (flag == 1) {
 		switch (mode) {
 			case 1:
-				code = 1;
-				while (code == 1) {
-					code = getch();
+				initwindow(240, 300);
+				simple_calculator();
+				first = 0.000000;
+				second = 0.000000;
+				result = 0.0000000;
+				deystvie = '0';
+				drob = 0.000000;
+				drob1 = 0.000000;
+				point = 0;
+				num = 1;
+				zero = 1;
+				while (1) {
+					code = 1;
+					s = 1;
+					if (kbhit()) {
+						code = getch();
+						if (code == 27) {
+							ch = '1';
+							flag = 0;
+							break;
+						} else if (code == 49) {
+							menu();
+							delay(10);
+							while (s == 1) {
+								if (GetAsyncKeyState(
+									VK_LBUTTON)) {
+									GetCursorPos(
+									    &cursorposition);
+									x = cursorposition
+										.x -
+									    8;
+									y = cursorposition
+										.y -
+									    30;
+									if (x > 0 &&
+									    y > 0 &&
+									    x < 175 &&
+									    y < 25) {
+										simple_calculator();
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 25 &&
+									    x < 175 &&
+									    y < 50) {
+										s = 0;
+										mode =
+										    2;
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 50 &&
+									    x < 175 &&
+									    y < 75) {
+										s = 0;
+										mode =
+										    3;
+										break;
+									}
+								}
+							}
+							if (s == 0) {
+								break;
+							}
+						} else if (code == 13) {
+							switch (deystvie) {
+								case '%':
+									result = percent(
+									    first,
+									    second);
+									break;
+								case 'v':
+									result = sqrt(
+									    first);
+									break;
+								case '0':
+									result =
+									    0;
+									break;
+								default:
+									result = calc(
+									    first,
+									    second,
+									    deystvie);
+									break;
+							}
+							first = result;
+							second = 0.000000;
+							num = 0;
+							point = 0;
+							drob1 = 0.000000;
+							drob = 0.000000;
+							zero = 1;
+							deystvie = '0';
+						} else {
+							continue;
+						}
+					} else {
+						if (GetAsyncKeyState(
+							VK_LBUTTON)) {
+							GetCursorPos(
+							    &cursorposition);
+							x = cursorposition.x -
+							    8;
+							y = cursorposition.y -
+							    30;
+							for (i = 0; i < 5;
+							     i++) {
+								if (x >
+								    massx[i]) {
+									continue;
+								} else if (
+								    x <
+								    massx[i]) {
+									break;
+								} else {
+									break;
+								}
+							}
+
+							for (j = 0; j < 8;
+							     j++) {
+								if (y >
+								    massy[j]) {
+									continue;
+								} else if (
+								    y <
+								    massy[j]) {
+									break;
+								} else {
+									break;
+								}
+							}
+
+							if (i > 0 && i < 4) {
+								switch (j) {
+									case 2:
+										j = 1;
+										break;
+									case 4:
+										j = 3;
+										break;
+									case 6:
+										j = 5;
+										break;
+									case 8:
+										j = 7;
+										break;
+								}
+							}
+							if (j == 7 && i == 2) {
+								i = 1;
+							}
+							position = i * 10 + j;
+
+							switch (position) {
+								case 11:
+									break;
+								case 21:									
+									break;
+								case 31:									
+									break;
+								case 41:									
+									break;
+								case 42:									
+									break;
+								case 13:									
+									break;
+								case 23:									
+									break;
+								case 33:									
+									break;
+								case 43:									
+									break;
+								case 44:									
+									break;
+								case 15:									
+									break;
+								case 25:									
+									break;
+								case 35:								
+									break;
+								case 45:									
+									break;
+								case 46:									
+									break;
+								case 17:									
+									break;
+								case 37:								
+									break;
+								case 47:									
+									break;
+							}
+						}
+					}
 				}
-				if (code == 27) {
-					ch = '1';
-					flag = 0;
-					closegraph();
-					break;
-				} else if (code == 49) {
-					break;
-				}
+
+				closegraph();
 				break;
+
 			case 2:
-				code = 1;
-				while (code == 1) {
-					code = getch();
+				initwindow(240, 300);
+				simple_calculator();
+
+				while (1) {
+					code = 1;
+					s = 1;
+					if (kbhit()) {
+						code = getch();
+						if (code == 27) {
+							ch = '2';
+							flag = 0;
+							break;
+						} else if (code == 49) {
+							menu();
+							while (s == 1) {
+								if (GetAsyncKeyState(
+									VK_LBUTTON)) {
+									GetCursorPos(
+									    &cursorposition);
+									x = cursorposition
+										.x -
+									    8;
+									y = cursorposition
+										.y -
+									    30;
+									if (x > 0 &&
+									    y > 0 &&
+									    x < 175 &&
+									    y < 25) {
+										s = 0;
+										mode =
+										    1;
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 25 &&
+									    x < 175 &&
+									    y < 50) {
+										simple_calculator();
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 50 &&
+									    x < 175 &&
+									    y < 75) {
+										s = 0;
+										mode =
+										    3;
+										break;
+									}
+								}
+							}
+							if (s == 0) {
+								break;
+							}
+						} else {
+							continue;
+						}
+					} else {
+						printf("Work!");
+						continue;
+					}
 				}
-				if (code == 27) {
-					ch = '2';
-					flag = 0;
-					closegraph();
-					break;
-				} else if (code == 49) {
-					break;
-				}
+				closegraph();
 				break;
+
 			case 3:
-				code = 1;
-				while (code == 1) {
-					code = getch();
+				initwindow(240, 300);
+				simple_calculator();
+
+				while (1) {
+					code = 1;
+					s = 1;
+					if (kbhit()) {
+						code = getch();
+						if (code == 27) {
+							ch = '3';
+							flag = 0;
+							break;
+						} else if (code == 49) {
+							menu();
+							while (s == 1) {
+								if (GetAsyncKeyState(
+									VK_LBUTTON)) {
+									GetCursorPos(
+									    &cursorposition);
+									x = cursorposition
+										.x -
+									    8;
+									y = cursorposition
+										.y -
+									    30;
+									if (x > 0 &&
+									    y > 0 &&
+									    x < 175 &&
+									    y < 25) {
+										s = 0;
+										mode =
+										    1;
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 25 &&
+									    x < 175 &&
+									    y < 50) {
+										s = 0;
+										mode =
+										    2;
+										break;
+									} else if (
+									    x > 0 &&
+									    y > 50 &&
+									    x < 175 &&
+									    y < 75) {
+										simple_calculator();
+										break;
+									}
+								}
+							}
+							if (s == 0) {
+								break;
+							}
+						} else {
+							continue;
+						}
+					} else {
+						printf("Work!");
+						continue;
+					}
 				}
-				if (code == 27) {
-					ch = '3';
-					flag = 0;
-					closegraph();
-					break;
-				} else if (code == 49) {
-					break;
-				}
+				closegraph();
 				break;
+
 			default:
+				printf("Unknown kind of mode!");
 				return 0;
 		}
 	}
-
 	p = fopen("mode.txt", "w");
 	putc(ch, p);
 	fclose(p);
-	free(p);
+	system("PAUSE");
 	return 0;
 }
+
+	
