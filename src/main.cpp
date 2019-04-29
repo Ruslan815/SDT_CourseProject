@@ -5,7 +5,7 @@
 #include <string.h>
 #include "foo.h"
 	
-int main() { 
+int main() {
 	bool flag = 1, s, num, point;
 	int mode, code, x, y, massx[5], massy[8], i, j, position;
 	double first, second, result, drob, drob1, zero, buffer;
@@ -134,6 +134,15 @@ int main() {
 							drob = 0.000000;
 							zero = 1;
 							deystvie = '0';
+
+							setfillstyle(1, 0);
+							bar(1, 1, 239, 59);
+							buffer = result;
+							buffer = snprintf(
+							    outp, 10, "%f",
+							    buffer);
+							outtextxy(10, 25, outp);
+							delay(1000);
 						} else {
 							continue;
 						}
@@ -966,6 +975,25 @@ int main() {
 									    1000);
 									break;
 								case 47:
+									buffer =
+									    0.000000;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
 									first =
 									    0.000000;
 									second =
@@ -984,6 +1012,40 @@ int main() {
 									zero =
 									    1;
 									break;
+							}
+
+							if (num) {
+								setfillstyle(1,
+									     0);
+								bar(1, 1, 239,
+								    59);
+								buffer = first;
+								buffer =
+								    snprintf(
+									outp,
+									10,
+									"%f",
+									buffer);
+								outtextxy(10,
+									  25,
+									  outp);
+								delay(1000);
+							} else {
+								setfillstyle(1,
+									     0);
+								bar(1, 1, 239,
+								    59);
+								buffer = second;
+								buffer =
+								    snprintf(
+									outp,
+									10,
+									"%f",
+									buffer);
+								outtextxy(10,
+									  25,
+									  outp);
+								delay(1000);
 							}
 						}
 					}
