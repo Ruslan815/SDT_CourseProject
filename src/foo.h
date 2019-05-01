@@ -8,4 +8,5 @@ void menu();
 double cosinus(double x);
 double sinus(double x);
 double tangent(double x);
+double cotangent(double x);
 #endif

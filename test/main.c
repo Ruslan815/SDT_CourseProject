@@ -465,4 +465,83 @@ CTEST(tangent_test_0_5pi, result_test)
     const double tol=0.0001;
     ASSERT_DBL_NEAR_TOL(expected, result, tol);
     }
+CTEST(cotangent_test_pi, result_test)
+{
+    // Given
+    const double x=3.14159562;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =10;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cotangent_test_0_5pi, result_test)
+{
+    // Given
+    const double x=1.5708;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =0;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cotangent_test_10pi, result_test)
+{
+    // Given
+    const double x=31.4159562;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =10;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cotangent_test_3_4pi, result_test)
+{
+    // Given
+    const double x=2.35619672;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =-1;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cotangent_test_786, result_test)
+{
+    // Given
+    const double x=786;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =1.459;
+    const double tol=0.001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cotangent_test_34_37, result_test)
+{
+    // Given
+    const double x=34.37;
+
+    // When
+    const double result = cotangent(x);
+
+    // Then
+    const double expected =-5.2701;
+    const double tol=0.001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+
 
