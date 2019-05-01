@@ -3,8 +3,8 @@
 all: bin build build_test
 test: bin/calculator_test
 
-bin/calculator_test: build_test/main.o build_test/square.o build_test/percent.o build_test/calc.o build_test/cosinus.o build_test/sinus.o
-	gcc -Wall -Werror build_test/main.o build_test/square.o build_test/percent.o build_test/calc.o build_test/cosinus.o build_test/sinus.o -o bin/calculator_test
+bin/calculator_test: build_test/main.o build_test/square.o build_test/percent.o build_test/calc.o build_test/cosinus.o build_test/sinus.o build_test/tangent.o
+	gcc -Wall -Werror build_test/main.o build_test/square.o build_test/percent.o build_test/calc.o build_test/cosinus.o build_test/sinus.o build_test/tangent.o -o bin/calculator_test
 build_test/main.o: test/main.c
 	gcc -Wall -Werror -c -I thirdparty -I src test/main.c -o build_test/main.o
 
@@ -18,6 +18,8 @@ build_test/cosinus.o: src/cosinus.c src/foo.h
 	gcc -Wall -Werror -c -I thirdparty -I src src/cosinus.c -o build_test/cosinus.o
 build_test/sinus.o: src/sinus.c src/foo.h
 	gcc -Wall -Werror -c -I thirdparty -I src src/sinus.c -o build_test/sinus.o
+build_test/tangent.o: src/tangent.c src/foo.h
+	gcc -Wall -Werror -c -I thirdparty -I src src/tangent.c -o build_test/tangent.o
 
 
 build:
