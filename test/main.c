@@ -296,3 +296,81 @@ CTEST(cosinus_test_123_56, result_test)
     const double tol=0.00001;
     ASSERT_DBL_NEAR_TOL(expected, result, tol);
     }
+CTEST(sinus_test_pi, result_test)
+{
+    // Given
+    const double x=3.14159265;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected = 0;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(sinus_test_8pi, result_test)
+{
+    // Given
+    const double x=25.132765;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected = 0;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(sinus_test_9_2pi, result_test)
+{
+    // Given
+    const double x=14.1371803;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected = 1;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(sinus_test_11_2pi, result_test)
+{
+    // Given
+    const double x=17.27877559;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected =-1;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(sinus_test_174pi, result_test)
+{
+    // Given
+    const double x=174;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected =-0.936462;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(sinus_test_365_345pi, result_test)
+{
+    // Given
+    const double x=365.345;
+
+    // When
+    const double result = sinus(x);
+
+    // Then
+    const double expected =0.7955;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
