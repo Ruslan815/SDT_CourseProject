@@ -374,3 +374,95 @@ CTEST(sinus_test_365_345pi, result_test)
     const double tol=0.0001;
     ASSERT_DBL_NEAR_TOL(expected, result, tol);
     }
+CTEST(tangent_test_pi, result_test)
+{
+    // Given
+    const double x=3.14159562;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =0;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_10pi, result_test)
+{
+    // Given
+    const double x=31.4159562;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =0;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_1_4pi, result_test)
+{
+    // Given
+    const double x=0.7853989;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =1;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_3_4pi, result_test)
+{
+    // Given
+    const double x=2.35619672;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =-1;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_194, result_test)
+{
+    // Given
+    const double x=194;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =-0.9872;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_876_23, result_test)
+{
+    // Given
+    const double x=876.23;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =-0.2825;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(tangent_test_0_5pi, result_test)
+{
+    // Given
+    const double x=1.5708;
+
+    // When
+    const double result = tangent(x);
+
+    // Then
+    const double expected =10;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+
