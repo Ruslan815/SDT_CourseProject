@@ -218,3 +218,81 @@ CTEST(calc_divide_test2, result_test)
     const double tol = 0.000001;
     ASSERT_DBL_NEAR_TOL(expected, result, tol);
 }
+CTEST(cosinus_test_pi, result_test)
+{
+    // Given
+    const double x=3.14159265;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected = -1;
+    const double tol=0.0000001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cosinus_test_6pi, result_test)
+{
+    // Given
+    const double x=18.8495559;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected = 1;
+    const double tol=0.0000001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cosinus_test_05pi, result_test)
+{
+    // Given
+    const double x=1.5708;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected =0;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cosinus_test_7_5pi, result_test)
+{
+    // Given
+    const double x=10.9956;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected =0;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cosinus_test_30, result_test)
+{
+    // Given
+    const double x=30;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected =0.1543;
+    const double tol=0.0001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(cosinus_test_123_56, result_test)
+{
+    // Given
+    const double x=123.56;
+
+    // When
+    const double result = cosinus(x);
+
+    // Then
+    const double expected =-0.508044;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
