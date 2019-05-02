@@ -591,4 +591,98 @@ CTEST(factorial__test_1, result_test)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
+CTEST(exponentiation__test_0_8, result_test)
+{
+    // Given
+    const int x = 0;
+    const int n = 8;
+
+    // When
+    const int result = exponentiation(x,n);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(exponentiation__test_8_0, result_test)
+{
+    // Given
+    const int x = 8;
+    const int n = 0;
+
+    // When
+    const int result = exponentiation(x,n);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(exponentiation__test_1_24, result_test)
+{
+    // Given
+    const int x = 1;
+    const int n = 24;
+
+    // When
+    const int result = exponentiation(x,n);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(exponentiation__test_1__4, result_test)
+{
+    // Given
+    const int x = 1;
+    const int n = -4;
+
+    // When
+    const int result = exponentiation(x,n);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(exponentiation_test_3_37_7, result_test)
+{
+    // Given
+    const double x=3.37;
+    const int n=8;
+
+    // When
+    const double result = exponentiation(x,n);
+
+    // Then
+    const double expected =16635.62826;
+    const double tol=0.001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(exponentiation_test_5_34__4, result_test)
+{
+    // Given
+    const double x=5.34;
+    const int n=-4;
+
+    // When
+    const double result = exponentiation(x,n);
+
+    // Then
+    const double expected =0.0012298;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
+CTEST(exponentiation_test__5__5, result_test)
+{
+    // Given
+    const double x=-5;
+    const int n=-5;
+
+    // When
+    const double result = exponentiation(x,n);
+
+    // Then
+    const double expected =-0.00032;
+    const double tol=0.00001;
+    ASSERT_DBL_NEAR_TOL(expected, result, tol);
+    }
 
