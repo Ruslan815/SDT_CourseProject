@@ -1120,6 +1120,16 @@ int main() {
 							}
 						} else if (code == 13) {
 							switch (deystvie) {
+								case 'e':
+									if (drob !=
+									    0) {
+										second -=
+										    drob1;
+									}
+									result = exponentiation(
+									    first,
+									    second);
+									break;
 								case '0':
 									result =
 									    0;
@@ -1819,7 +1829,20 @@ int main() {
 									break;
 								case 45:									
 									break;
-								case 46:								
+								case 46:
+									deystvie =
+									    'e';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
 									break;
 								case 17:
 									if (point &&
