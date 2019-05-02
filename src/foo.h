@@ -11,4 +11,5 @@ double tangent(double x);
 double cotangent(double x);
 int factorial(int x);
 double exponentiation(double x, int n);
+void engineering_calculator();
 #endif
