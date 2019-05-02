@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "foo.h" 
+#include "foo.h"
 
 int main() {
 	bool flag = 1, s, num, point;
@@ -1417,9 +1417,77 @@ int main() {
 										}
 									}
 									break;
-								case 41:									
+								case 41:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = sinus(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
 									break;
 								case 42:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = cosinus(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
 									break;
 								case 13:
 									if (point) {
@@ -1623,8 +1691,94 @@ int main() {
 									}
 									break;
 								case 43:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = tangent(
+									    first);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									if (result ==
+									    10) {
+										result =
+										    0;
+										outtextxy(
+										    10,
+										    25,
+										    "Not exist!");
+									} else {
+										buffer =
+										    result;
+										buffer = snprintf(
+										    outp,
+										    10,
+										    "%f",
+										    buffer);
+										outtextxy(
+										    10,
+										    25,
+										    outp);
+									}
+									first =
+									    result;
+									delay(
+									    1000);
 									break;
-								case 44:							
+								case 44:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = cotangent(
+									    first);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									if (result ==
+									    10) {
+										result =
+										    0;
+										outtextxy(
+										    10,
+										    25,
+										    "Not exist!");
+									} else {
+										buffer =
+										    result;
+										buffer = snprintf(
+										    outp,
+										    10,
+										    "%f",
+										    buffer);
+										outtextxy(
+										    10,
+										    25,
+										    outp);
+									}
+									first =
+									    result;
+									delay(
+									    1000);
 									break;
 								case 15:
 									if (point) {
@@ -1827,7 +1981,46 @@ int main() {
 										}
 									}
 									break;
-								case 45:									
+								case 45:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									if (drob !=
+									    0) {
+										first -=
+										    drob1;
+									}
+									result = factorial(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
 									break;
 								case 46:
 									deystvie =
