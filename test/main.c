@@ -543,5 +543,52 @@ CTEST(cotangent_test_34_37, result_test)
     const double tol=0.001;
     ASSERT_DBL_NEAR_TOL(expected, result, tol);
     }
+CTEST(factorial__test_0, result_test)
+{
+    // Given
+    const int x = 0;
 
+    // When
+    const int result = factorial(x);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(factorial__test_otr, result_test)
+{
+    // Given
+    const int x = -234;
+
+    // When
+    const int result = factorial(x);
+
+    // Then
+    const int expected = -1;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(factorial__test_11, result_test)
+{
+    // Given
+    const int x = 11;
+
+    // When
+    const int result = factorial(x);
+
+    // Then
+    const int expected =39916800;
+    ASSERT_EQUAL(expected, result);
+}
+CTEST(factorial__test_1, result_test)
+{
+    // Given
+    const int x = 1;
+
+    // When
+    const int result = factorial(x);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
 
