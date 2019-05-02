@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "foo.h"
-	
+
 int main() {
 	bool flag = 1, s, num, point;
 	int mode, code, x, y, massx[5], massy[8], i, j, position;
@@ -1053,11 +1053,18 @@ int main() {
 
 				closegraph();
 				break;
-
 			case 2:
 				initwindow(240, 300);
-				simple_calculator();
-
+				engineering_calculator();
+				first = 0.000000;
+				second = 0.000000;
+				result = 0.0000000;
+				deystvie = '0';
+				drob = 0.000000;
+				drob1 = 0.000000;
+				point = 0;
+				num = 1;
+				zero = 1;
 				while (1) {
 					code = 1;
 					s = 1;
@@ -1069,6 +1076,7 @@ int main() {
 							break;
 						} else if (code == 49) {
 							menu();
+							delay(10);
 							while (s == 1) {
 								if (GetAsyncKeyState(
 									VK_LBUTTON)) {
@@ -1093,7 +1101,7 @@ int main() {
 									    y > 25 &&
 									    x < 175 &&
 									    y < 50) {
-										simple_calculator();
+										engineering_calculator();
 										break;
 									} else if (
 									    x > 0 &&
@@ -1110,14 +1118,1079 @@ int main() {
 							if (s == 0) {
 								break;
 							}
+						} else if (code == 13) {
+							switch (deystvie) {
+								case 'e':
+									if (drob !=
+									    0) {
+										second -=
+										    drob1;
+									}
+									result = exponentiation(
+									    first,
+									    second);
+									break;
+								case '0':
+									result =
+									    0;
+									break;
+								default:
+									break;
+							}
+							first = result;
+							second = 0.000000;
+							num = 1;
+							point = 0;
+							drob1 = 0.000000;
+							drob = 0.000000;
+							zero = 1;
+							deystvie = '0';
+
+							setfillstyle(1, 0);
+							bar(1, 1, 239, 59);
+							buffer = result;
+							buffer = snprintf(
+							    outp, 10, "%f",
+							    buffer);
+							outtextxy(10, 25, outp);
+							delay(1000);
 						} else {
 							continue;
 						}
 					} else {
-						printf("Work!");
-						continue;
+						if (GetAsyncKeyState(
+							VK_LBUTTON)) {
+							GetCursorPos(
+							    &cursorposition);
+							x = cursorposition.x -
+							    8;
+							y = cursorposition.y -
+							    30;
+							for (i = 0; i < 5;
+							     i++) {
+								if (x >
+								    massx[i]) {
+									continue;
+								} else if (
+								    x <
+								    massx[i]) {
+									break;
+								} else {
+									break;
+								}
+							}
+
+							for (j = 0; j < 8;
+							     j++) {
+								if (y >
+								    massy[j]) {
+									continue;
+								} else if (
+								    y <
+								    massy[j]) {
+									break;
+								} else {
+									break;
+								}
+							}
+
+							if (i > 0 && i < 4) {
+								switch (j) {
+									case 2:
+										j = 1;
+										break;
+									case 4:
+										j = 3;
+										break;
+									case 6:
+										j = 5;
+										break;
+									case 8:
+										j = 7;
+										break;
+								}
+							}
+							if (j == 7 && i == 2) {
+								i = 1;
+							}
+							position = i * 10 + j;
+
+							switch (position) {
+								case 11:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    7;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    7;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    7;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    7;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 21:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    8;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    8;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    8;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    8;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 31:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    9;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    9;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    9;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    9;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 41:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = sinus(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
+									break;
+								case 42:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = cosinus(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
+									break;
+								case 13:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    4;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    4;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    4;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    4;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 23:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    5;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    5;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    5;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    5;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 33:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    6;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    6;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    6;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    6;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 43:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = tangent(
+									    first);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									if (result ==
+									    10) {
+										result =
+										    0;
+										outtextxy(
+										    10,
+										    25,
+										    "Not exist!");
+									} else {
+										buffer =
+										    result;
+										buffer = snprintf(
+										    outp,
+										    10,
+										    "%f",
+										    buffer);
+										outtextxy(
+										    10,
+										    25,
+										    outp);
+									}
+									first =
+									    result;
+									delay(
+									    1000);
+									break;
+								case 44:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									result = cotangent(
+									    first);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									if (result ==
+									    10) {
+										result =
+										    0;
+										outtextxy(
+										    10,
+										    25,
+										    "Not exist!");
+									} else {
+										buffer =
+										    result;
+										buffer = snprintf(
+										    outp,
+										    10,
+										    "%f",
+										    buffer);
+										outtextxy(
+										    10,
+										    25,
+										    outp);
+									}
+									first =
+									    result;
+									delay(
+									    1000);
+									break;
+								case 15:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    1;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    1;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    1;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    1;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 25:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    2;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    2;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    2;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    2;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 35:
+									if (point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    3;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    (drob *
+											     10) +
+											    3;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    (first *
+											     10) +
+											    3;
+											delay(
+											    1000);
+										} else {
+											second =
+											    (second *
+											     10) +
+											    3;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 45:
+									num = 1;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									if (drob !=
+									    0) {
+										first -=
+										    drob1;
+									}
+									result = factorial(
+									    first);
+									first =
+									    result;
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									buffer =
+									    result;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									delay(
+									    1000);
+									break;
+								case 46:
+									deystvie =
+									    'e';
+									num = 0;
+									point =
+									    0;
+									drob1 =
+									    0.000000;
+									drob =
+									    0.000000;
+									zero =
+									    1;
+									delay(
+									    1000);
+									break;
+								case 17:
+									if (point &&
+									    drob ==
+										0) {
+										zero *=
+										    0.1;
+										delay(
+										    1000);
+									} else if (
+									    point) {
+										if (num) {
+											first -=
+											    drob1;
+											drob =
+											    drob *
+											    10;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											first +=
+											    drob1;
+											delay(
+											    1000);
+										} else {
+											second -=
+											    drob1;
+											drob =
+											    drob *
+											    10;
+											drob1 =
+											    drob;
+											while (
+											    drob1 >=
+											    0.1) {
+												drob1 /=
+												    10;
+											}
+											drob1 *=
+											    10;
+											drob1 *=
+											    zero;
+											second +=
+											    drob1;
+											delay(
+											    1000);
+										}
+									} else {
+										if (num) {
+											first =
+											    first *
+											    10;
+											delay(
+											    1000);
+										} else {
+											second =
+											    second *
+											    10;
+											delay(
+											    1000);
+										}
+									}
+									break;
+								case 37:
+									point =
+									    1;
+									delay(
+									    1000);
+									break;
+								case 47:
+									buffer =
+									    0.000000;
+									buffer = snprintf(
+									    outp,
+									    10,
+									    "%"
+									    "f",
+									    buffer);
+									setfillstyle(
+									    1,
+									    0);
+									bar(1,
+									    1,
+									    239,
+									    59);
+									outtextxy(
+									    10,
+									    25,
+									    outp);
+									first =
+									    0.000000;
+									second =
+									    0.000000;
+									result =
+									    0.0000000;
+									deystvie =
+									    '0';
+									drob =
+									    0.000000;
+									drob1 =
+									    0.000000;
+									point =
+									    0;
+									num = 1;
+									zero =
+									    1;
+									break;
+							}
+
+							if (num) {
+								setfillstyle(1,
+									     0);
+								bar(1, 1, 239,
+								    59);
+								buffer = first;
+								buffer =
+								    snprintf(
+									outp,
+									10,
+									"%f",
+									buffer);
+								outtextxy(10,
+									  25,
+									  outp);
+								delay(1000);
+							} else {
+								setfillstyle(1,
+									     0);
+								bar(1, 1, 239,
+								    59);
+								buffer = second;
+								buffer =
+								    snprintf(
+									outp,
+									10,
+									"%f",
+									buffer);
+								outtextxy(10,
+									  25,
+									  outp);
+								delay(1000);
+							}
+						}
 					}
 				}
+
 				closegraph();
 				break;
 
@@ -1200,4 +2273,3 @@ int main() {
 	return 0;
 }
 
-	

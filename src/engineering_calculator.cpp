@@ -44,5 +44,6 @@ void engineering_calculator() {
 	outtextxy(200, 216, "x");
 	settextstyle(2, 0, 4);
 	outtextxy(210, 215, "y");
+	settextstyle(2, 0, 7);
 }
 
