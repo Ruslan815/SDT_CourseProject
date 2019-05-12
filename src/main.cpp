@@ -2354,55 +2354,637 @@ int main() {
 
 							switch (position) {
 								case 11:
-									j1 = 7;									
+									j1 = 7;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    7;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    7;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '7';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    7;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 21:
 									j1 = 8;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    8;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    8;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '8';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    8;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 31:
+									j1 = 9;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    9;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    9;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '9';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    9;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 41:
 									j1 = 10;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'A';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 42:
 									j1 = 11;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'B';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 13:
 									j1 = 4;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    4;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    4;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '4';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    4;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 23:
 									j1 = 5;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    5;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    5;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '5';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    5;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 33:
 									j1 = 6;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    6;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    6;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '6';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    6;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 43:
 									j1 = 12;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'C';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 44:
 									j1 = 13;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'D';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 15:
 									j1 = 1;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    1;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    1;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '1';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    1;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 25:
 									j1 = 2;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    2;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    2;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '2';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    2;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 35:
 									j1 = 3;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    (sys1 *
+										     10) +
+										    3;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    (sys2 *
+										     10) +
+										    3;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '3';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    (number *
+												     10) +
+												    3;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 45:
 									j1 = 14;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'E';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 46:
 									j1 = 15;
+									if (arrow >
+									    1) {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    'F';
+												i1++;
+												delay(
+												    1000);
+											} else {
+												break;
+											}
+										} else {
+											break;
+										}
+									} else {
+										break;
+									}
 									break;
 								case 17:
 									j1 = 0;
+									if (arrow ==
+									    0) {
+										sys1 =
+										    sys1 *
+										    10;
+										delay(
+										    1000);
+									} else if (
+									    arrow ==
+									    1) {
+										sys2 =
+										    sys2 *
+										    10;
+										delay(
+										    1000);
+									} else {
+										if (j1 <
+										    sys1) {
+											if (sys1 >=
+												11 &&
+											    sys1 <=
+												16) {
+												str[i1] =
+												    '0';
+												i1++;
+												delay(
+												    1000);
+											} else if (
+											    sys1 >=
+												2 &&
+											    sys1 <=
+												10) {
+												number =
+												    number *
+												    10;
+												delay(
+												    1000);
+											}
+										} else {
+											break;
+										}
+									}
 									break;
 								case 37:
 									arrow +=
 									    1;
+									delay(
+									    1000);
 									break;
 								case 47:
 									buffer =
@@ -2583,5 +3165,4 @@ int main() {
 	fclose(p);
 	system("PAUSE");
 	return 0;
-}
-
+} 
