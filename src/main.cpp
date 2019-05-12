@@ -2546,6 +2546,23 @@ int main() {
 									}
 
 								} else {
+									outtextxy(
+									    10,
+									    25,
+									    "In"
+									    "va"
+									    "li"
+									    "d "
+									    "nu"
+									    "mb"
+									    "er"
+									    " s"
+									    "ys"
+									    "te"
+									    "m"
+									    "!");
+									delay(
+									    2000);
 									break;
 								}
 							}
