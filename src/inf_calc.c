@@ -6,16 +6,19 @@ int fn_10(int, int);
 int f10_n(int, int, int[], char[], int*);
 int f11_16(char[], int);
 
-void inf_calc(int a[], char str[], int* n, int sys1, int sys2, int num)
+int inf_calc(int a[], char str[], int* n, int sys1, int sys2, int num)
 {
     int des;
+    long res;
     if (sys1 >= 11 && sys1 <= 16) {
         des = f11_16(str, sys1);
-        f10_n(des, sys2, a, str, &(*n));
-    } else {
+        res = f10_n(des, sys2, a, str, &(*n));
+    } else if (sys1 >= 1 && sys1 <= 10) {
         des = fn_10(num, sys1);
-        f10_n(des, sys2, a, str, &(*n));
-    }
+        res = f10_n(des, sys2, a, str, &(*n));
+    } else
+        res = -1;
+    return res;
 }
 
 int power(int x, int n)
@@ -46,73 +49,96 @@ int fn_10(int num, int sys1)
 
 int f10_n(int num, int sys2, int a[], char str[], int* n)
 {
-    int p = num, i, k;
+    int i, k;
+    long p = num;
     while (p != 0) {
         (*n)++;
         p /= sys2;
     }
+    p = 0;
     if (sys2 >= 2 && sys2 <= 10) {
         for (i = 0; i < (*n); i++) {
             a[i] = num % sys2;
             num /= sys2;
         }
-    } else {
+        for (i = *(n)-1; i >= 0; i--) {
+            p = p * 10 + a[i];
+        }
+    } else if (sys2 >= 11 && sys2 <= 16) {
         i = 0;
         while (num > 0) {
             k = num % sys2;
             switch (k) {
             case 1:
                 str[i] = '1';
+                p += 1;
                 break;
             case 2:
                 str[i] = '2';
+                p += 2;
                 break;
             case 3:
                 str[i] = '3';
+                p += 3;
                 break;
             case 4:
                 str[i] = '4';
+                p += 4;
                 break;
             case 5:
                 str[i] = '5';
+                p += 5;
                 break;
             case 6:
                 str[i] = '6';
+                p += 6;
                 break;
             case 7:
                 str[i] = '7';
+                p += 7;
                 break;
             case 8:
                 str[i] = '8';
+                p += 8;
                 break;
             case 9:
                 str[i] = '9';
+                p += 9;
+                break;
+            case 0:
+                str[i] = '0';
                 break;
             case 10:
                 str[i] = 'A';
+                p += 10;
                 break;
             case 11:
                 str[i] = 'B';
+                p += 11;
                 break;
             case 12:
                 str[i] = 'C';
+                p += 12;
                 break;
             case 13:
                 str[i] = 'D';
+                p += 13;
                 break;
             case 14:
                 str[i] = 'E';
+                p += 14;
                 break;
             case 15:
                 str[i] = 'F';
+                p += 15;
                 break;
-            default:
-                return 0;
             }
             num /= sys2;
             i++;
         }
-    }
+    } else
+        p = -1;
+    return p;
 }
 
 int f11_16(char str[], int sys1)
@@ -157,6 +183,8 @@ int f11_16(char str[], int sys1)
             s = power(sys1, len - 1 - i);
             b += 9 * s;
             break;
+        case '0':
+            break;
         case 'A':
             s = power(sys1, len - 1 - i);
             b += 10 * s;
@@ -181,8 +209,6 @@ int f11_16(char str[], int sys1)
             s = power(sys1, len - 1 - i);
             b += 15 * s;
             break;
-        default:
-            return 0;
         }
     }
     return b;

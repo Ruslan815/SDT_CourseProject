@@ -12,5 +12,5 @@ double cotangent(double x);
 int factorial(int x);
 double exponentiation(double x, int n);
 void engineering_calculator();
-void inf_calc(int[], char[], int*, int, int, int);
+int inf_calc(int[], char[], int*, int, int, int);
 #endif
